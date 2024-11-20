@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Start Docker install!" > /var/log/startup.log
+echo "Start Docker install!" >> /var/log/startup.log
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 systemctl enable docker
