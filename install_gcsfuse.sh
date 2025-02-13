@@ -9,7 +9,9 @@ echo "deb [signed-by=/usr/share/keyrings/cloud.google.asc] https://packages.clou
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share/keyrings/cloud.google.asc
 
 # Install fuse
-sudo apt-get install gcsfuse
+sudo apt-get update && sudo apt-get -y install gcsfuse
+sudo chmod +x /usr/bin/gcsfuse
+echo "user_allow_other" | sudo tee -a /etc/fuse.conf
 
 # Log success message
 echo "gcsfuse installation complete" >> /var/log/startup.log
