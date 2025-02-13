@@ -10,7 +10,7 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share
 
 # Install fuse
 sudo apt-get update && sudo apt-get -y install gcsfuse
-sudo chmod 666 /usr/bin/gcsfuse
+sudo chmod +x /usr/bin/gcsfuse
 echo "user_allow_other" | sudo tee -a /etc/fuse.conf
 
 # Log success message
