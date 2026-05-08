@@ -7,5 +7,5 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
     | sudo apt-key add -
 
 # Update and install gcsfuse
-sudo apt update
-sudo apt install gcsfuse
+apt update -y
+apt install -y gcsfuse
